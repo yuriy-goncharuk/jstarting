@@ -53,7 +53,7 @@ body
 #input
 {
   height: 100%;
-  width: 85%;
+  width: 80%;
   vertical-align: bottom;
   box-sizing: border-box;
 }
@@ -66,7 +66,7 @@ body
   background: rgb(40, 173, 255);
   float: right;
   height: 100%;
-  width: 15%;
+  width: 20%;
   -webkit-user-select: none;
 }
 #button_text
