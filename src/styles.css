@@ -22,6 +22,10 @@
     height: 95%;
     background: white;
 }
+#messages.hover
+{
+	 -webkit-transform: rotate(15deg);
+}
 #controls
 {    
     width: 100%;
@@ -60,6 +64,7 @@ body
 #button:hover 
 { 
   background: rgb(80, 200, 255); 
+     -webkit-transform: rotate(3deg);
 }
 #button
 {
@@ -68,6 +73,7 @@ body
   height: 100%;
   width: 20%;
   -webkit-user-select: none;
+
 }
 #button_text
 {

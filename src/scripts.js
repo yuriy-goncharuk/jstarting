@@ -1,5 +1,6 @@
 
-window.addEventListener(
+window.addEventListener
+(
     "DOMContentLoaded", function()
     {
         let con =  new Controller();
@@ -12,8 +13,12 @@ class Controller
     {
         let viv = new View()
         let mod = new Model()
+
+
         var butt = document.getElementById('button');
         var inp = document.getElementById('input');
+
+
         butt.addEventListener
         (
             "click", function(event)
@@ -25,6 +30,8 @@ class Controller
                 }
             }
         )
+
+
         inp.addEventListener
         (
             "keyup", function(event) 
@@ -57,19 +64,26 @@ class View
         var date = today.getFullYear()+'-'+(today.getMonth()+1)+'-'+today.getDate();
         var time = today.getHours() + ":" + today.getMinutes() + ":" + today.getSeconds();
         var dateTime = date+' '+time;
+
+
         let bubble = document.createElement('div');
+        bubble.className = "bubble";
+
         let content = document.createElement('div');
+        content.className = "message_content";
+
         let info = document.createElement('div');
+        info.className = "message_info";
+
+
         content.innerHTML = mess;
         info.innerHTML = sender + " " + dateTime;
-        bubble.className = "bubble";
-        content.className = "message_content";
-        info.className = "message_info";
+        
         bubble.appendChild(content);
         bubble.appendChild(info);
         this.box.appendChild(bubble);
-        this.myAudio.play();
 
+        this.myAudio.play();
         let intervall = this.box.scrollHeight
         setInterval(this.smart_scroll(this.box,intervall), 1000);
     }
