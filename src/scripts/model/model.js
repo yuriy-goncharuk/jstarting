@@ -13,7 +13,7 @@ class Model extends Observable
         const dateTime = date+' '+time;
         this.messages.push(new Message(dateTime, content));
     }
-    sendLastMessage()
+    putLastMessageIntoView()
     {
         this.notifyAll("view_take_this", this.messages[this.messages.length-1])
     }
@@ -22,7 +22,7 @@ class Model extends Observable
         if(event == "data_ok_lets_send_it")
         {
             this.addMessage(data);
-            this.sendLastMessage();
+            this.putLastMessageIntoView();
         }
     }
 }

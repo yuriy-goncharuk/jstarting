@@ -8,8 +8,10 @@ window.addEventListener
         const controller = new Controller();
 
         view.addObserver(controller);
+
         model.addObserver(controller);
         model.addObserver(view);
+        
         controller.addObserver(model);
     }
 )

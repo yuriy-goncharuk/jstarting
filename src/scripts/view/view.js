@@ -3,7 +3,8 @@ class View extends Observable
     constructor() 
     {
         super()
-
+        this.myAudio = new Audio;
+        this.myAudio.src = "resources/click.mp3";
         const send_button = document.getElementById('button');
         this.input_field = document.getElementById('input');
         this.messagesBox = document.getElementById('messages');
@@ -27,6 +28,9 @@ class View extends Observable
     {
         this.messagesBox.appendChild(this.messageInDiv(mess));
         this.input_field.value = "";
+        let intervall = this.messagesBox.scrollHeight
+        this.smart_scroll(this.messagesBox,intervall)
+        this.myAudio.play();
     }
     smart_scroll(container, interval)
     {
@@ -46,7 +50,6 @@ class View extends Observable
         bubble.appendChild(info);
         return bubble
     }
-
     notify(obj, event, data) 
     {
         if(event == "view_take_this")
