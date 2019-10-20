@@ -9,5 +9,10 @@ window.addEventListener
 
         view.addObserver(controller);
         model.addObserver(controller);
+
+
+        view.notify("none","none","none")
+
+        print("here")
     }
 )

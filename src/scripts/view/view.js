@@ -7,8 +7,11 @@ class View extends Observable
         const send_button = document.getElementById('button');
         const input_field = document.getElementById('input');
 
-        send_button.addEventListener("click",function(event){this.notifyAll(event, inp.value);}.bind(this))
-        input_field.addEventListener("keyup",function(event){this.notifyAll(event, inp.value);}.bind(this))
+        send_button.addEventListener(
+            "click",function(event){this.notifyAll(event, input_field.value);}.bind(this))
+
+        input_field.addEventListener(
+            "keyup",function(event){this.notifyAll(event, input_field.value);}.bind(this))
 
         // this.box = document.getElementById('messages');
         // this.myAudio = new Audio;
@@ -16,13 +19,18 @@ class View extends Observable
     }
     putMessage(mess) 
     {
-        bubble = 
-        this.box.appendChild(bubble);
-        this.myAudio.play();
-        this.smart_scroll(this.box,intervall);
+        // bubble = 
+        // this.box.appendChild(bubble);
+        // this.myAudio.play();
+        // this.smart_scroll(this.box,intervall);
     }
     smart_scroll(container, interval)
     {
        container.scrollTop = interval; 
+    }
+
+    notify(obj, event, data) 
+    {
+        alert("cont" + data)
     }
 }

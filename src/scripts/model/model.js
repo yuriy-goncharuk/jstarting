@@ -3,7 +3,7 @@ class Model extends Observable
     constructor() 
     {
         super()
-        
+
         this.messages = [] //db in array
     }
     addMessage(content)
@@ -17,5 +17,9 @@ class Model extends Observable
     sendLastMessage()
     {
         this.view.sendMessage(this.messages[this.messages.length-1].getDocMessage())
+    }
+    notify(obj, event, data) 
+    {
+        alert("cont" + data)
     }
 }

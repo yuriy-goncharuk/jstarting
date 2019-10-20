@@ -17,9 +17,9 @@ class Observable
 
     notifyAll(e, data) 
     {
-        for (var observer in this.observers)
+        for (var i = 0; i < this.observers.length; i++) 
         {
-            observer.on(this, e, data);
+            this.observers[i].notify(this, e, data);
         }
     }
 }

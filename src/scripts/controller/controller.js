@@ -4,4 +4,9 @@ class Controller  extends Observable
     {
         super();
     }
+
+    notify(obj, event, data) 
+    {
+        alert("cont" + data)
+    }
 }
