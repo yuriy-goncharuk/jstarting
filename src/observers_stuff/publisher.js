@@ -1,7 +1,0 @@
-class Publisher
-{
-    notify()
-    {
-        
-    }
-}

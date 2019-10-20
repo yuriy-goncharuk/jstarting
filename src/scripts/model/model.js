@@ -1,9 +1,10 @@
-class Model
+class Model extends Observable
 {
-    constructor(view) 
+    constructor() 
     {
-        this.view = view
-        this.messages = []
+        super()
+        
+        this.messages = [] //db in array
     }
     addMessage(content)
     {
