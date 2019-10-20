@@ -1,19 +1,22 @@
 #main_rect 
 {
     position: absolute;
-    left: 34%; 
+    left: 34%;
     width: 32%;
     height: 95%;
     margin: 0 auto;
+    border: 2px solid orange;
     box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
 .bubble
 {
-  margin: 10px;
+  border: 2px solid orange;
+  margin: 8px;
   box-shadow: 0 0 10px rgba(0,0,0,0.5);
 }
-#messages::-webkit-scrollbar { 
-  display: none; 
+#messages::-webkit-scrollbar 
+{ 
+  display: none;
 }
 #messages
 {   
@@ -22,15 +25,11 @@
     height: 95%;
     background: white;
 }
-#messages.hover
-{
-	 -webkit-transform: rotate(15deg);
-}
 #controls
 {    
     width: 100%;
     height: 5%;
-    background:#aeddee;
+    background: rgb(255, 246, 193);
 }
 .message_content
 {   
@@ -52,7 +51,7 @@
 }
 body
 {
-  background: rgb(255, 255, 255);
+  background: rgb(205, 249, 255);
 }
 #input
 {
@@ -63,17 +62,15 @@ body
 }
 #button:hover 
 { 
-  background: rgb(80, 200, 255); 
-     -webkit-transform: rotate(3deg);
+  background: rgb(255, 217, 0);
 }
 #button
 {
-  background: rgb(40, 173, 255);
+  background: orange;
   float: right;
   height: 100%;
   width: 20%;
   -webkit-user-select: none;
-
 }
 #button_text
 {

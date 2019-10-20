@@ -5,27 +5,28 @@ class View extends Observable
         super()
 
         const send_button = document.getElementById('button');
-        const input_field = document.getElementById('input');
+        this.input_field = document.getElementById('input');
         this.messagesBox = document.getElementById('messages');
 
         send_button.addEventListener(
             "click",function(event)
             {
-                this.notifyAll("user_wants_to_send", input_field.value);
+                this.notifyAll("user_wants_to_send", this.input_field.value);
             }.bind(this))
 
-        input_field.addEventListener(
+        this.input_field.addEventListener(
             "keyup",function(event)
             {
                 if (event.keyCode === 13) 
                 {
-                    this.notifyAll("user_wants_to_send", input_field.value);
+                    this.notifyAll("user_wants_to_send", this.input_field.value);
                 }
             }.bind(this))
     }
     putMessageIntoDoc(mess) 
     {
         this.messagesBox.appendChild(this.messageInDiv(mess));
+        this.input_field.value = "";
     }
     smart_scroll(container, interval)
     {
