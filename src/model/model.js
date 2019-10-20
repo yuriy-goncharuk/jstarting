@@ -15,6 +15,6 @@ class Model
     }
     sendLastMessage()
     {
-        this.view.sendMessage(this.messages[this.messages.length-1].getd)
+        this.view.sendMessage(this.messages[this.messages.length-1].getDocMessage())
     }
 }

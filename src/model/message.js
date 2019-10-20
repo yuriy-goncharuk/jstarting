@@ -5,7 +5,7 @@ class Message
         this.date = date;
         this.content = content;
     }
-    getDocMessage()
+    get messageInDiv()
     {
         const bubble = document.createElement('div')
         bubble.className = "bubble"

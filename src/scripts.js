@@ -1,12 +1,3 @@
-
-window.addEventListener
-(
-    "DOMContentLoaded", function()
-    {
-        let con =  new Controller();
-    }
-)
-
 class Controller 
 {
     constructor() 
