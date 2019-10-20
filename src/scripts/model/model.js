@@ -3,8 +3,7 @@ class Model extends Observable
     constructor() 
     {
         super()
-
-        this.messages = [] //db in array
+        this.messages = [] //db in array lol
     }
     addMessage(content)
     {
@@ -16,10 +15,14 @@ class Model extends Observable
     }
     sendLastMessage()
     {
-        this.view.sendMessage(this.messages[this.messages.length-1].getDocMessage())
+        this.notifyAll("view_take_this", this.messages[this.messages.length-1])
     }
     notify(obj, event, data) 
     {
-        alert("cont" + data)
+        if(event == "data_ok_lets_send_it")
+        {
+            this.addMessage(data);
+            this.sendLastMessage();
+        }
     }
 }

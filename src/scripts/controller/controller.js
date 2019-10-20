@@ -7,6 +7,18 @@ class Controller  extends Observable
 
     notify(obj, event, data) 
     {
-        alert("cont" + data)
+        if(event=="user_wants_to_send")
+        {
+            if(this.checkData(data))
+            {
+                this.notifyAll("data_ok_lets_send_it", data)
+            }
+        }
+    }
+
+    checkData(data)
+    {
+        if(data!="")
+            return true;
     }
 }
