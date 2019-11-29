@@ -1,0 +1,98 @@
+#main_rect {
+  position: absolute;
+  left: 34%;
+  width: 32%;
+  height: 95%;
+  margin: 0 auto;
+  border: 2px solid orange;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+.bubble {
+  border: 2px solid orange;
+  margin: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+}
+
+.bubble:hover {
+  border: 2px solid rgb(255, 217, 0);
+}
+#messages {
+  overflow-y: scroll;
+  width: 100%;
+  height: 95%;
+  background: white;
+}
+#controls {
+  width: 100%;
+  height: 5%;
+  background: rgb(255, 246, 193);
+}
+.message_content {
+  font: 13pt/12pt sans-serif;
+  background-color: rgb(255, 255, 255);
+  padding-top: 10px;
+  padding-left: 10px;
+  height: 50%;
+}
+.message_info {
+  font: 10pt/9pt sans-serif;
+  text-align: right;
+  color: lightslategrey;
+  background-color: rgb(255, 255, 255);
+  width: 100%;
+  height: 12px;
+}
+body {
+  background: rgb(205, 249, 255);
+}
+
+#input {
+  height: 100%;
+  width: 80%;
+  vertical-align: bottom;
+  box-sizing: border-box;
+}
+#input:focus {
+  border: 1px solid rgb(255, 166, 0);
+  outline: none;
+}
+
+#button:hover {
+  background-color: rgb(255, 217, 0);
+}
+#button {
+  background-color: orange;
+  font: 16pt/12pt sans-serif;
+  text-align: center;
+  color: rgb(255, 0, 0);
+  float: right;
+  height: 100%;
+  width: 20%;
+  -webkit-user-select: none;
+}
+#messages::-webkit-scrollbar {
+  width: 10px;
+}
+#messages::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+#messages::-webkit-scrollbar-thumb {
+  background: orange;
+}
+#messages::-webkit-scrollbar-thumb:hover {
+  background: rgb(255, 217, 0);
+}
+#autenfication {
+  position: absolute;
+  left: 32%;
+  width: 35%;
+  height: 98%;
+  margin: 0 auto;
+
+  z-index: 10;
+  background: greenyellow;
+  position: absolute;
+}
+#autorizate {
+  background: indigo;
+}
