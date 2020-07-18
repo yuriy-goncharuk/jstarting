@@ -18,7 +18,7 @@
   },
   "homepage": "https://github.com/yuriy-goncharuk/jstarting#readme",
   "dependencies": {
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "webpack-cli": "^3.3.10"
   },
   "devDependencies": {
